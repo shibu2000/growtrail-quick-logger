@@ -17,11 +17,11 @@
 
 ## Download
 
-| Package | Best for | Download |
-|---|---|---|
-| **Windows installer** | Windows 10 and 11 (64-bit) | [**Growtrail-Quick-Logger-Setup-x64.exe**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/Growtrail-Quick-Logger-Setup-x64.exe) |
-| **.deb installer** | Ubuntu 20.04, 22.04, 24.04 (recommended on Ubuntu) | [**growtrail-quick-logger_amd64.deb**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/growtrail-quick-logger_amd64.deb) |
-| **AppImage** | Any 64-bit Linux, no install needed | [**Growtrail-Quick-Logger-x86_64.AppImage**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/Growtrail-Quick-Logger-x86_64.AppImage) |
+| Package | Best for | Size | Download |
+|---|---|---|---|
+| **Windows installer** | Windows 10 and 11 (64-bit) | ~125 MB | [**Growtrail-Quick-Logger-Setup-x64.exe**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/Growtrail-Quick-Logger-Setup-x64.exe) |
+| **.deb installer** | Ubuntu 20.04, 22.04, 24.04 (recommended on Ubuntu) | ~104 MB | [**growtrail-quick-logger_amd64.deb**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/growtrail-quick-logger_amd64.deb) |
+| **AppImage** | Any 64-bit Linux, no install needed | ~130 MB | [**Growtrail-Quick-Logger-x86_64.AppImage**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/Growtrail-Quick-Logger-x86_64.AppImage) |
 
 All versions and release notes: [Releases](https://github.com/shibu2000/growtrail-quick-logger/releases).
 
