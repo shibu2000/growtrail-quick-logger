@@ -1,0 +1,43 @@
+appId: com.bluehorse.growtrail-quick-logger
+productName: Growtrail Quick Logger
+copyright: Copyright © 2026 Shibu Dhara
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**
+  - package.json
+  - build/icon.png
+  - '!**/*.map'
+asar: true
+asarUnpack:
+  - node_modules/playwright-core/**
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Utility
+  icon: build/icon.png
+  executableName: growtrail-quick-logger
+  synopsis: Create Growtrail tasks and log time in one run
+  description: Desktop tool that creates Growtrail tasks and logs time against each of them, driving your own logged-in browser.
+  artifactName: ${productName}-${version}-${arch}.${ext}
+  desktop:
+    entry:
+      Name: Growtrail Quick Logger
+      StartupWMClass: Growtrail Quick Logger
+deb:
+  depends:
+    - libgtk-3-0
+    - libnotify4
+    - libnss3
+    - libxss1
+    - libxtst6
+    - xdg-utils
+    - libatspi2.0-0
+    - libuuid1
+    - libsecret-1-0
+appImage:
+  artifactName: ${productName}-${version}-${arch}.${ext}
+npmRebuild: false
+publish: null

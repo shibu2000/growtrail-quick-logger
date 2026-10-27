@@ -1,0 +1,8 @@
+node_modules/
+out/
+dist/
+.playwright-mcp/
+*.tsbuildinfo
+.claude/
+.mcp.json
+docs/selector-inventory.md
