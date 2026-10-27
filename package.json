@@ -8,7 +8,7 @@
     "name": "Shibu Dhara",
     "email": "shibu.bluehorse@gmail.com"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "electron-vite dev",

@@ -1,6 +1,6 @@
 appId: com.bluehorse.growtrail-quick-logger
 productName: Growtrail Quick Logger
-copyright: Copyright © 2026 Shibu Dhara
+copyright: Copyright © 2026 Bluehorse Software Private Limited
 directories:
   output: dist
   buildResources: build

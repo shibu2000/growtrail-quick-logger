@@ -25,6 +25,8 @@
 
 All versions and release notes: [Releases](https://github.com/shibu2000/growtrail-quick-logger/releases).
 
+Free code signing on Windows provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org). See the [code signing policy](#code-signing-policy).
+
 ## Install
 
 ### Windows 10 / 11
@@ -106,3 +108,21 @@ npm run package:win    # builds dist/*.exe (run on Windows)
 ```
 
 Releases are built by GitHub Actions: pushing a tag such as `v0.2.0` builds the Windows and Linux installers and publishes them on the Releases page.
+
+## Code signing policy
+
+Windows releases are built from this repository by GitHub Actions and signed through SignPath.
+
+- Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org)
+- Committers and reviewers: [Shibu Dhara](https://github.com/shibu2000)
+- Approvers: [Shibu Dhara](https://github.com/shibu2000)
+
+Only builds produced by the release workflow from tagged commits in this repository are signed.
+
+## Privacy
+
+This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it. It only talks to the Growtrail site you sign in to, in your own browser. Settings, drafts and run history stay on your computer, and no passwords, cookies or tokens are stored.
+
+## License
+
+[MIT](LICENSE) © 2026 Bluehorse Software Private Limited. Developed by [Shibu Dhara](https://github.com/shibu2000).
