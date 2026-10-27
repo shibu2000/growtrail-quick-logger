@@ -13,32 +13,47 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
       - run: npm ci
-
       - run: npm run typecheck
-
       - run: npm test
-
       - run: npm run package:linux
-
       - uses: actions/upload-artifact@v4
         with:
-          name: linux-installers
+          name: linux
           path: |
             dist/*.deb
             dist/*.AppImage
 
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run package:win
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: dist/*.exe
+
+  release:
+    needs: [linux, windows]
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: installers
+          merge-multiple: true
       - uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           name: Growtrail Quick Logger ${{ github.ref_name }}
           generate_release_notes: true
-          files: |
-            dist/*.deb
-            dist/*.AppImage
+          files: installers/*

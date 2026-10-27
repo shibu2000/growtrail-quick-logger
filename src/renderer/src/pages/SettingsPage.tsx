@@ -252,7 +252,7 @@ export function SettingsPage({ settings, browser, onSaved, onClose }: Props) {
             {form.connectionMode === 'attach' && (
               <p className="mt-2 rounded-md bg-canvas p-2 font-mono text-xs">
                 {(form.browserExecutable || detected[0] || 'google-chrome') +
-                  ` --remote-debugging-port=${form.cdpPort} --user-data-dir=$HOME/.growtrail-logger-profile`}
+                  ` --remote-debugging-port=${form.cdpPort} --user-data-dir=<an empty folder>`}
               </p>
             )}
           </div>

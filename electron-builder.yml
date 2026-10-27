@@ -39,5 +39,18 @@ deb:
     - libsecret-1-0
 appImage:
   artifactName: Growtrail-Quick-Logger-${arch}.${ext}
+win:
+  target:
+    - target: nsis
+      arch: x64
+  icon: build/icon.png
+nsis:
+  artifactName: Growtrail-Quick-Logger-Setup-x64.${ext}
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Growtrail Quick Logger
 npmRebuild: false
 publish: null

@@ -20,7 +20,10 @@ const CANDIDATES: Record<string, string[]> = {
     `${process.env['PROGRAMFILES']}\\Google\\Chrome\\Application\\chrome.exe`,
     `${process.env['PROGRAMFILES(X86)']}\\Google\\Chrome\\Application\\chrome.exe`,
     `${process.env['LOCALAPPDATA']}\\Google\\Chrome\\Application\\chrome.exe`,
+    `${process.env['LOCALAPPDATA']}\\Thorium\\Application\\thorium.exe`,
+    `${process.env['PROGRAMFILES']}\\Thorium\\Application\\thorium.exe`,
     `${process.env['PROGRAMFILES(X86)']}\\Microsoft\\Edge\\Application\\msedge.exe`,
+    `${process.env['PROGRAMFILES']}\\Microsoft\\Edge\\Application\\msedge.exe`,
   ],
   darwin: [
     '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',

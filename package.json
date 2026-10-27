@@ -1,7 +1,7 @@
 {
   "name": "growtrail-quick-logger",
   "productName": "Growtrail Quick Logger",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Desktop tool that creates Growtrail tasks and logs time against them in one run.",
   "main": "./out/main/index.js",
   "author": {
@@ -17,7 +17,8 @@
     "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
     "test": "vitest run",
     "test:watch": "vitest",
-    "package:linux": "npm run build && electron-builder --linux AppImage && electron-builder --linux deb"
+    "package:linux": "npm run build && electron-builder --linux AppImage && electron-builder --linux deb",
+    "package:win": "npm run build && electron-builder --win nsis"
   },
   "dependencies": {
     "playwright-core": "^1.64.1",

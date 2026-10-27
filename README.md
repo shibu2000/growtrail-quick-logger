@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/shibu2000/growtrail-quick-logger/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/shibu2000/growtrail-quick-logger?label=latest%20release"></a>
-  <img alt="Platform" src="https://img.shields.io/badge/platform-Ubuntu%20%7C%20Linux%20x64-orange">
+  <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20%7C%20Ubuntu%20%7C%20Linux%20x64-orange">
 </p>
 
 ---
@@ -19,12 +19,21 @@
 
 | Package | Best for | Download |
 |---|---|---|
-| **.deb installer** | Ubuntu 20.04, 22.04, 24.04 (recommended) | [**growtrail-quick-logger_amd64.deb**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/growtrail-quick-logger_amd64.deb) |
+| **Windows installer** | Windows 10 and 11 (64-bit) | [**Growtrail-Quick-Logger-Setup-x64.exe**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/Growtrail-Quick-Logger-Setup-x64.exe) |
+| **.deb installer** | Ubuntu 20.04, 22.04, 24.04 (recommended on Ubuntu) | [**growtrail-quick-logger_amd64.deb**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/growtrail-quick-logger_amd64.deb) |
 | **AppImage** | Any 64-bit Linux, no install needed | [**Growtrail-Quick-Logger-x86_64.AppImage**](https://github.com/shibu2000/growtrail-quick-logger/releases/latest/download/Growtrail-Quick-Logger-x86_64.AppImage) |
 
 All versions and release notes: [Releases](https://github.com/shibu2000/growtrail-quick-logger/releases).
 
 ## Install
+
+### Windows 10 / 11
+
+1. Download and run `Growtrail-Quick-Logger-Setup-x64.exe`.
+2. The installer is not code-signed yet, so Windows SmartScreen may say "Windows protected your PC". Click **More info → Run anyway**.
+3. Choose the install folder (no administrator rights needed). A Start menu and desktop shortcut are created.
+
+To update, run the newer installer. To remove: **Settings → Apps → Installed apps → Growtrail Quick Logger → Uninstall**.
 
 ### .deb (Ubuntu)
 
@@ -46,7 +55,7 @@ The AppImage needs FUSE 2: `sudo apt install libfuse2t64` on Ubuntu 24.04, `sudo
 
 ## Requirements
 
-- 64-bit Intel/AMD Linux (Ubuntu 20.04 or newer)
+- Windows 10 or 11 (64-bit), or 64-bit Intel/AMD Linux (Ubuntu 20.04 or newer)
 - A Chromium-based browser installed: **Google Chrome**, **Thorium**, **Microsoft Edge** or **Chromium** (not the Snap version)
 - A Growtrail account
 
@@ -79,10 +88,11 @@ The AppImage needs FUSE 2: `sudo apt install libfuse2t64` on Ubuntu 24.04, `sudo
 |---|---|
 | "No Chrome, Chromium or Thorium found" | Install Google Chrome, or set the browser path in **Settings → Browser**. |
 | "Login required" | Sign in to Growtrail in the browser window the app opened, then press **Re-check**. |
+| Windows says "Windows protected your PC" | The installer is not signed yet. Click **More info → Run anyway**. |
 | AppImage does not start | Install FUSE 2 (see above), or use the `.deb`. |
 | Dark mode does not follow Ubuntu | Use the **Theme** button in the header to pick Dark. |
 
-Settings, drafts and run history are stored in `~/.config/Growtrail Quick Logger/`.
+Settings, drafts and run history are stored in `%APPDATA%\Growtrail Quick Logger\` on Windows and `~/.config/Growtrail Quick Logger/` on Linux.
 
 ## Build from source
 
@@ -92,6 +102,7 @@ npm run dev            # run the app in development
 npm run typecheck
 npm test
 npm run package:linux  # builds dist/*.deb and dist/*.AppImage
+npm run package:win    # builds dist/*.exe (run on Windows)
 ```
 
-Releases are built by GitHub Actions: pushing a tag such as `v0.2.0` builds both installers and publishes them on the Releases page.
+Releases are built by GitHub Actions: pushing a tag such as `v0.2.0` builds the Windows and Linux installers and publishes them on the Releases page.
