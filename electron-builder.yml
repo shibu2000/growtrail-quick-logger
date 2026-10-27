@@ -21,12 +21,12 @@ linux:
   executableName: growtrail-quick-logger
   synopsis: Create Growtrail tasks and log time in one run
   description: Desktop tool that creates Growtrail tasks and logs time against each of them, driving your own logged-in browser.
-  artifactName: ${productName}-${version}-${arch}.${ext}
   desktop:
     entry:
       Name: Growtrail Quick Logger
       StartupWMClass: Growtrail Quick Logger
 deb:
+  artifactName: growtrail-quick-logger_${arch}.${ext}
   depends:
     - libgtk-3-0
     - libnotify4
@@ -38,6 +38,6 @@ deb:
     - libuuid1
     - libsecret-1-0
 appImage:
-  artifactName: ${productName}-${version}-${arch}.${ext}
+  artifactName: Growtrail-Quick-Logger-${arch}.${ext}
 npmRebuild: false
 publish: null

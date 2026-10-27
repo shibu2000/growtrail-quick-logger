@@ -1,6 +1,6 @@
 # Growtrail Quick Logger — Implementation Plan
 
-Source spec: `README.md`. This plan turns that spec into ordered, verifiable work.
+Source spec: `docs/SPEC.md`. This plan turns that spec into ordered, verifiable work.
 
 ---
 
